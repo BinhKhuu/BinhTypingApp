@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingApp.Infrastructur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingApp.Application.Domain", "BinhTypingApp.Application.Domain\BinhTypingApp.Application.Domain.csproj", "{94285D90-4A8F-4796-A356-18A97D774E78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingApp.Tests", "BinhTypingApp.Tests\BinhTypingApp.Tests.csproj", "{570AE19C-4799-44FD-9387-0A0858C6D991}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{94285D90-4A8F-4796-A356-18A97D774E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94285D90-4A8F-4796-A356-18A97D774E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94285D90-4A8F-4796-A356-18A97D774E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{570AE19C-4799-44FD-9387-0A0858C6D991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{570AE19C-4799-44FD-9387-0A0858C6D991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{570AE19C-4799-44FD-9387-0A0858C6D991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{570AE19C-4799-44FD-9387-0A0858C6D991}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
