@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using BinhTypingApp.Application.Domain.Repository;
+using Microsoft.AspNetCore.Components;
 
 namespace BinhTypingApp.Web.Pages
 {
@@ -10,15 +11,20 @@ namespace BinhTypingApp.Web.Pages
         [Parameter] 
         public Task<String> TypingQuoteService {  get; set; }
 
+        [Inject]
+        public ITypingNotesHttpRepository _http {  get; set; }
+
         protected override async void OnInitialized()
         {
             base.OnInitialized();
             await LoadTypingNote();
+            StateHasChanged();
         }
 
         public async Task LoadTypingNote()
         {
-            TypingNote = "This is a test note";
+
+            TypingNote = await _http.Get();
         }
     }
 }
