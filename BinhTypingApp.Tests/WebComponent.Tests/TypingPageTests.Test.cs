@@ -11,11 +11,24 @@ using Index = BinhTypingApp.Web.Pages.Index;
 using Microsoft.AspNetCore.Components;
 using Bunit.TestDoubles;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using BinhTypingApp.Application.Domain.Repository;
+using BinhTypingApp.Web.HttpRepository;
 
 namespace BinhTypingApp.Tests.WebComponent.Tests
 {
     public class TypingPageTests
     {
+
+        //https://bunit.dev/docs/providing-input/inject-services-into-components.html
+        internal class MockHttp : ITypingNotesHttpRepository
+        {
+            public async Task<string> Get()
+            {
+
+                return "TEST";
+            }
+        }
 
         private readonly string TYPINGMSG = "Typing Page";
 
@@ -39,6 +52,9 @@ namespace BinhTypingApp.Tests.WebComponent.Tests
         {
             // Arrange
             using var ctx = new TestContext();
+       
+            ctx.Services.AddSingleton<ITypingNotesHttpRepository>(new MockHttp());
+
             var cut = ctx.RenderComponent<Web.Pages.TypingPage>();
             var headingElement = cut.Find("h1");
             
@@ -66,8 +82,8 @@ namespace BinhTypingApp.Tests.WebComponent.Tests
         {
             // Arrange
             using var ctx = new TestContext();
+            ctx.Services.AddSingleton<ITypingNotesHttpRepository>(new MockHttp());
             var cut = ctx.RenderComponent<Web.Pages.TypingPage>();
-            
 
             // ACT
 
