@@ -9,7 +9,7 @@ public partial class Quote
 
     public Guid? QuoteId { get; set; }
 
-    public string? QuoteValue { get; set; }
+    public string QuoteValue { get; set; } = null!;
 
     public string? QuoteSource { get; set; }
 
