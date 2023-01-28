@@ -16,7 +16,15 @@ namespace BinhTypingApp.Infrastructure.Repository
         }
         public string GetRandomQuote()
         {
-            var quote = _context.Quotes.OrderBy(r => Guid.NewGuid()).Take(1).FirstOrDefault();
+            // this does not work for non MS SQL so its an issue for testing
+            // var quote = _context.Quotes.OrderBy(r => Guid.NewGuid()).Take(1).FirstOrDefault();
+
+            // works on all db types
+            Random rand = new Random();
+            int toSkip = rand.Next(0, _context.Quotes.Count());
+            var quote = _context.Quotes.Skip(toSkip).Take(toSkip).FirstOrDefault();
+
+
             if (quote == null)
                 return "";
 
