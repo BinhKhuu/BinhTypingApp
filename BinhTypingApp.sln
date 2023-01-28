@@ -11,17 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{2A16E3F9-DFC2-4E60-96E9-526EA29FF657}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingAppAPI.Application", "BinhTypingAppAPI.Application\BinhTypingAppAPI.Application.csproj", "{9D1B2D9E-22A9-42AC-8A03-4D82DCB1B6D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinhTypingAppAPI.Application", "BinhTypingAppAPI.Application\BinhTypingAppAPI.Application.csproj", "{9D1B2D9E-22A9-42AC-8A03-4D82DCB1B6D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingApp.Web", "BinhTypingApp.Web\BinhTypingApp.Web.csproj", "{71BCEC8B-2E7C-44D8-A04C-952DFA10486A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinhTypingApp.Web", "BinhTypingApp.Web\BinhTypingApp.Web.csproj", "{71BCEC8B-2E7C-44D8-A04C-952DFA10486A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingApp.Domain", "BinhTypingApp.Domain\BinhTypingApp.Domain.csproj", "{93BAD848-E22F-40F3-B428-0E179D349C39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinhTypingApp.Domain", "BinhTypingApp.Domain\BinhTypingApp.Domain.csproj", "{93BAD848-E22F-40F3-B428-0E179D349C39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingApp.Infrastructure", "BinhTypingApp.Infrastructure\BinhTypingApp.Infrastructure.csproj", "{D1299F5D-4F9E-432F-8081-76573DB2B32C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinhTypingApp.Infrastructure", "BinhTypingApp.Infrastructure\BinhTypingApp.Infrastructure.csproj", "{D1299F5D-4F9E-432F-8081-76573DB2B32C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingApp.Application.Domain", "BinhTypingApp.Application.Domain\BinhTypingApp.Application.Domain.csproj", "{94285D90-4A8F-4796-A356-18A97D774E78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinhTypingApp.Application.Domain", "BinhTypingApp.Application.Domain\BinhTypingApp.Application.Domain.csproj", "{94285D90-4A8F-4796-A356-18A97D774E78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinhTypingApp.Tests", "BinhTypingApp.Tests\BinhTypingApp.Tests.csproj", "{570AE19C-4799-44FD-9387-0A0858C6D991}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinhTypingApp.Tests", "BinhTypingApp.Tests\BinhTypingApp.Tests.csproj", "{570AE19C-4799-44FD-9387-0A0858C6D991}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
