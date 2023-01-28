@@ -1,3 +1,8 @@
+using BinhTypingApp.Domain.Repositories;
+using BinhTypingApp.Infrastructure.Data;
+using BinhTypingApp.Infrastructure.Repository;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +20,10 @@ builder.Services.AddCors(policy =>
         .WithExposedHeaders("X-Pagination")
     );
 });
+builder.Services.AddDbContext<BinhTypingAppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("BinhTypingAppDB")));
+builder.Services.AddScoped<IQuoteRepository, QuoteRepository>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

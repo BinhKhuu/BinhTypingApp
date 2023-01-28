@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BinhTypingApp.Domain.Repositories;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BinhTypingAppAPI.Application.Controller
@@ -7,10 +8,16 @@ namespace BinhTypingAppAPI.Application.Controller
     [ApiController]
     public class TypingNotesController : ControllerBase
     {
+        private IQuoteRepository _quoteRep;
+        public TypingNotesController(IQuoteRepository quoteRepo) { 
+            _quoteRep = quoteRepo;
+        }
+
         [HttpGet]
         public async Task<string> Get()
         {
-            return "This is a test notes 2";
+
+            return _quoteRep.GetRandomQuote();
         }
     }
 }
