@@ -93,5 +93,22 @@ namespace BinhTypingApp.Tests.WebComponent.Tests
             Assert.True(typingNoteEle > 0);
         }
 
+        [Fact]
+        public void ItShouldLoadGridLayout() {
+            using var ctx = new TestContext();
+
+            ctx.Services.AddSingleton<ITypingNotesHttpRepository>(new MockHttp());
+
+            var cut = ctx.RenderComponent<Web.Pages.TypingPage>();
+            var container = cut.Find("#TypingNoteContainer");
+
+            // ACT
+
+
+
+            // Assert
+            Assert.True(container != null);
+        }
+
     }
 }

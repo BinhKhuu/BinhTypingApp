@@ -1,10 +1,15 @@
 ﻿@page "/typingpage"
 <h1>Typing Page</h1>
 
-<MudBlazor.MudCard>
-    <MudBlazor.MudCardContent>
-        <MudBlazor.MudText id="TypingNote">
-            @TypingNote
-        </MudBlazor.MudText>
-    </MudBlazor.MudCardContent>
-</MudBlazor.MudCard>
+<MudGrid id="TypingNoteContainer">
+    <MudItem xs="12">
+        <MudPaper Class="pa-16 ma-2" Elevation="3">
+            <MudText id="TypingNote">
+                @TypingNote
+            </MudText>
+        </MudPaper>
+    </MudItem>
+
+
+</MudGrid>
+

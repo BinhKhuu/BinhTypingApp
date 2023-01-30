@@ -1,4 +1,5 @@
-﻿using BinhTypingApp.Domain.Repositories;
+﻿using BinhTypingApp.Domain.Models;
+using BinhTypingApp.Domain.Repositories;
 using BinhTypingApp.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,11 @@ namespace BinhTypingApp.Infrastructure.Repository
             // works on all db types
             Random rand = new Random();
             int toSkip = rand.Next(0, _context.Quotes.Count());
-            var quote = _context.Quotes.Skip(toSkip).Take(toSkip).FirstOrDefault();
+            Quote quote;
+            if(_context.Quotes.Count() == 1 || toSkip == 0)
+                quote = _context.Quotes.FirstOrDefault();
+            else
+                quote = _context.Quotes.OrderBy(c=> c.Id).Skip(toSkip).Take(toSkip).FirstOrDefault();
 
 
             if (quote == null)

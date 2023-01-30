@@ -4,6 +4,7 @@ using BinhTypingApp.Web.HttpRepository;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
+using MudBlazor.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
@@ -13,4 +14,5 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration.GetValue<String>("BASEAPIURL")) });
 builder.Services.AddScoped<ITypingNotesHttpRepository, TypingNotesHttpRepository>();
 var baseURL = builder.Configuration.GetValue<String>("BASEAPIURL");
+builder.Services.AddMudServices();
 await builder.Build().RunAsync();
