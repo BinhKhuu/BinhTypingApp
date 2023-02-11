@@ -9,7 +9,12 @@
             </MudText>
         </MudPaper>
     </MudItem>
-
+    <div >
+        <input id="HiddenUserInput" style="display:none" @onkeypress="OnUserTypeEvent" @bind-value="UserInput"/>
+    </div>
+    <div>
+        @UserInput
+    </div>
 
 </MudGrid>
 
